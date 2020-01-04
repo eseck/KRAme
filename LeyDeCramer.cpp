@@ -16,6 +16,10 @@ typedef struct dosXdos{
     float X;
     float Y;
     float R;
+    float determinanteSistema;
+    float determinanteX;
+    float determianteY;
+    float Resultado;
 }D;
 
 //Declaraciones de Funciones
@@ -31,6 +35,33 @@ void ImprimirResultados(float Resultado);
 
 int main() {
     return 0;
+}
+
+void Insertar(D* Ejercicio){
+    float x,y,r,X,Y,R;
+    cout << "Ingrese el valor de X para la primera ecuacion";
+    cin >> x;
+    cout << "Ingrese el valor de Y para la primera ecuacion";
+    cin >> y;
+    cout << "Ingrese el valor de la ecuacion";
+    cin >> r;
+    cout << "Ingrese el valor de X para la segunda ecuacion";
+    cin >> X;
+    cout << "Ingrese el valor de Y para la segunda ecuacion";
+    cin >> Y;
+    cout << "Ingrese el valor de Y para la segunda ecuacion";
+
+    cout <<
+
+    /*
+    cout <<"Nombre: ";
+    cin>>name;cout<<"Rut:";
+    cin>>rut;cout<<"Numero: ";
+    cin>>number;cout<< "Edad: ";
+    cin>>edad;X->name=name;
+    X->edad=edad;
+    X->number=number;
+    X->rut=rut;*/
 }
 
 void DetSistemaDos (float x, float y,float r,float X, float Y,float R){
