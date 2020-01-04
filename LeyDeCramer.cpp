@@ -49,9 +49,10 @@ void Insertar(D* Ejercicio){
     cin >> X;
     cout << "Ingrese el valor de Y para la segunda ecuacion";
     cin >> Y;
-    cout << "Ingrese el valor de Y para la segunda ecuacion";
+    cout << "Ingrese el valor de la segunda ecuacion";
+    cin >> R;
 
-    cout <<
+
 
     /*
     cout <<"Nombre: ";
