@@ -10,11 +10,11 @@ using namespace std;
 //Declaraciones de Funciones
 
 //Funciones para Resolver un sistema 2X2
-void DetSistemaDos (float x, float y,float r,float X, float Y,float R);
-void DetXDos(float x, float y,float r,float X, float Y,float R);
-void DetYDos(float x, float y,float r,float X, float Y,float R);
-void DivCoefDos(float determinanteX, float determinanteSistema);
-void Imprimir(float Resultado);
+void DetSistemaDos (float x, float y,float r,float X, float Y,float R); //Determinante Sistema.
+void DetXDos(float x, float y,float r,float X, float Y,float R); //Determinante de la X.
+void DetYDos(float x, float y,float r,float X, float Y,float R); //Determinante de la Y.
+void DivCoefDos(float determinanteX, float determinanteSistema); //Division de los Coeficientes
+void ImprimirResultados(float Resultado);
 
 
 int main() {
@@ -66,7 +66,8 @@ void DivCoefDos(float determinanteX, float determinanteSistema){
     cout << ValorX << "," << ValorY;
 }
 
-void Imprimir(float Resultado){
-    cout << "el programa ha terminando de operar, los resultados fueron:"<< endl;
-    
+void ImprimirResultados(float Resultado){
+    cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
+    cout << "(" << Resultado << ")" << endl;
+    cout << "Gracias por preferir NeoTel Companny" << endl;
 }
