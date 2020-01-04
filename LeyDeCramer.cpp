@@ -7,9 +7,21 @@
 #include <string>
 using namespace std;
 
+//Declaraciones de Estructuras
+
+typedef struct dosXdos{
+    float x;
+    float y;
+    float r;
+    float X;
+    float Y;
+    float R;
+}D;
+
 //Declaraciones de Funciones
 
 //Funciones para Resolver un sistema 2X2
+void Insertar(D* X);
 void DetSistemaDos (float x, float y,float r,float X, float Y,float R); //Determinante Sistema.
 void DetXDos(float x, float y,float r,float X, float Y,float R); //Determinante de la X.
 void DetYDos(float x, float y,float r,float X, float Y,float R); //Determinante de la Y.
@@ -18,13 +30,6 @@ void ImprimirResultados(float Resultado);
 
 
 int main() {
-    float x;
-    float y;
-    float r;
-    float X;
-    float Y;
-    float R;
-
     return 0;
 }
 
