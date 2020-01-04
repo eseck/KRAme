@@ -109,3 +109,4 @@ void ImprimirResultados(float Resultado){
     cout << "Gracias por preferir NeoTel Companny" << endl;
 }
 //wena wena geente//
+//wewen wen wue wueeeee buan buan buooooo tutarariruta tutararitibirurirubi//
