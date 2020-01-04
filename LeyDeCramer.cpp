@@ -68,6 +68,6 @@ void DivCoefDos(float determinanteX, float determinanteSistema){
 
 void ImprimirResultados(float Resultado){
     cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
-    cout << "(" << Resultado << ")" << endl;
+    cout << "(" << Resultado << "," << ")" << endl;
     cout << "Gracias por preferir NeoTel Companny" << endl;
 }
