@@ -7,28 +7,12 @@
 using namespace std;
 //Declaraciones de Estructuras
 typedef struct dosXdos{
-    float x;
-    float y;
-    float r;
-    float X;
-    float Y;
-    float R;
+    float x,y,r,X,Y,R;
     float ResultadoX;
     float ResultadoY;
 }D;
 typedef struct tresXtres{
-    float x;
-    float y;
-    float z;
-    float r;
-    float X;
-    float Y;
-    float Z;
-    float R;
-    float aX;
-    float aY;
-    float aZ;
-    float aR;
+    float x,y,z,r,X,Y,Z,R,aX,aY,aZ,aR;
     float ResultadoX;
     float ResultadoY;
     float ResultadoZ;
@@ -83,18 +67,12 @@ int main() {
 //Funciones2X2
 void InsertarDos(D* Ejercicio){
     float x,y,r,X,Y,R;
-    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
-    cin >> x;
-    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;
-    cin >> y;
-    cout << "Ingrese el valor de la ecuacion"<<endl;
-    cin >> r;
-    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;
-    cin >> X;
-    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;
-    cin >> Y;
-    cout << "Ingrese el valor de la segunda ecuacion"<<endl;
-    cin >> R;
+    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;cin >> x;
+    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;cin >> y;
+    cout << "Ingrese el valor de la ecuacion"<<endl;cin >> r;
+    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;cin >> X;
+    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;cin >> Y;
+    cout << "Ingrese el valor de la segunda ecuacion"<<endl;cin >> R;
     Ejercicio->x=x;
     Ejercicio->y=y;
     Ejercicio->r=r;
@@ -131,30 +109,18 @@ void ImprimirResultadosDos(D* Ejercicio){
 //Funciones3X3
 void InsertarTres(T* Ejercicio) {
     float x,y,z,r,X,Y,Z,R,aX,aY,aZ,aR;
-    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
-    cin >> x;
-    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;
-    cin >> y;
-    cout << "Ingrese el valor que acompañara al Z para la primera ecuacion"<<endl;
-    cin >> z;
-    cout << "Ingrese el valor de la ecuacion"<<endl;
-    cin >> r;
-    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;
-    cin >> X;
-    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;
-    cin >> Y;
-    cout << "Ingrese el valor que acompañara al Z para la segunda ecuacion"<<endl;
-    cin >> Z;
-    cout << "Ingrese el valor de la segunda ecuacion"<<endl;
-    cin >> R;
-    cout << "Ingrese el valor que acompañara al X para la tercera ecuacion"<<endl;
-    cin >> aX;
-    cout << "Ingrese el valor que acompañara al Y para la tercera ecuacion"<<endl;
-    cin >> aY;
-    cout << "Ingrese el valor que acompañara al Z para la tercera ecuacion"<<endl;
-    cin >> aZ;
-    cout << "Ingrese el valor de la tercera ecuacion"<<endl;
-    cin >> aR;
+    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;cin >> x;
+    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;cin >> y;
+    cout << "Ingrese el valor que acompañara al Z para la primera ecuacion"<<endl;cin >> z;
+    cout << "Ingrese el valor de la ecuacion"<<endl;cin >> r;
+    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;cin >> X;
+    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;cin >> Y;
+    cout << "Ingrese el valor que acompañara al Z para la segunda ecuacion"<<endl;cin >> Z;
+    cout << "Ingrese el valor de la segunda ecuacion"<<endl;cin >> R;
+    cout << "Ingrese el valor que acompañara al X para la tercera ecuacion"<<endl;cin >> aX;
+    cout << "Ingrese el valor que acompañara al Y para la tercera ecuacion"<<endl;cin >> aY;
+    cout << "Ingrese el valor que acompañara al Z para la tercera ecuacion"<<endl;cin >> aZ;
+    cout << "Ingrese el valor de la tercera ecuacion"<<endl;cin >> aR;
     Ejercicio->z=z;
     Ejercicio->x=x;
     Ejercicio->y=y;
