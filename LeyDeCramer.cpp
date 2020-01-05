@@ -199,7 +199,7 @@ void DesarrolloTres(T* Ejercicio){
     Ejercicio->ResultadoZ=Resultados[2];
 }
 void ImprimirResultadosTres(T* Ejercicio){
-    float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY,Ejercicio->ResultadoZ};
+    float resultado[3] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY,Ejercicio->ResultadoZ};
     cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
     cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << ")" << endl;
     cout << endl << endl;
