@@ -23,14 +23,15 @@ typedef struct dosXdos{
 
 //Funciones para Resolver un sistema 2X2
 void Insertar(D* X);
-void Desarrollo(D X);
+void Desarrollo(D* X);
 void ImprimirResultados(float Resultado);
 
 
 int main() {
     D* ejercicio = new D;
     Insertar(ejercicio);
-    Desarrollo(D);
+    Desarrollo(ejercicio);
+//    ImprimirResultados(e);
     delete(ejercicio);
     return 0;
 }
@@ -57,10 +58,10 @@ void Insertar(D* Ejercicio){
     Ejercicio->R=R;
 }
 
-void Desarrollo(D Ejercicio){
+void Desarrollo(D* Ejercicio){
     //arrays para ordenar los valores
-    float uno[3] = {Ejercicio.x,Ejercicio.y,Ejercicio.r};
-    float dos[3] = {Ejercicio.X,Ejercicio.Y,Ejercicio.R};
+    float uno[3] = {Ejercicio->x,Ejercicio->y,Ejercicio->r};
+    float dos[3] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R};
     //Determinante Sistema.
     float determinanteSistema = (uno[0] * dos[1])-(uno[1] * dos[0]);
     cout<<determinanteSistema;
