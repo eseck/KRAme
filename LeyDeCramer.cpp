@@ -39,7 +39,7 @@ void InsertarDos(D* X);
 void DesarrolloDos(D* X);
 void ImprimirResultadosDos(D* X);
 //Funcion para Resolver un sistema 3x3
-void InsertarTres(T* Ejercicio);
+void InsertarTres(T* X);
 void DesarrolloTres(T* X);
 void ImprimirResultadosTres(T* X);
 //Main
@@ -59,9 +59,9 @@ int main() {
                 delete(ejercicio);
                 break;
             case 2:
-                InsertarTres();
-                DesarrolloTres(ejercicio);
-                ImprimirResultadosTres(ejercicio);
+                void InsertarTres(T* X);
+                void DesarrolloTres(T* X);
+                void ImprimirResultadosTres(T* X);
                 break;
             case 3:
                 cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
