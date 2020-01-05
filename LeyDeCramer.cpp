@@ -8,7 +8,6 @@
 using namespace std;
 
 //Declaraciones de Estructuras
-
 typedef struct dosXdos{
     float x;
     float y;
@@ -16,7 +15,8 @@ typedef struct dosXdos{
     float X;
     float Y;
     float R;
-    float Resultado;
+    float ResultadoX;
+    float ResultadoY;
 }D;
 
 //Declaraciones de Funciones
@@ -24,31 +24,30 @@ typedef struct dosXdos{
 //Funciones para Resolver un sistema 2X2
 void Insertar(D* X);
 void Desarrollo(D* X);
-void ImprimirResultados(float Resultado);
-
+void ImprimirResultados(D* X);
 
 int main() {
     D* ejercicio = new D;
     Insertar(ejercicio);
     Desarrollo(ejercicio);
-//    ImprimirResultados(e);
+    ImprimirResultados(ejercicio);
     delete(ejercicio);
     return 0;
 }
 
 void Insertar(D* Ejercicio){
     float x,y,r,X,Y,R;
-    cout << "Ingrese el valor que acompañara al X para la primera ecuacion";
+    cout << "Ingrese el valor que acompañara al X para la primera ecuacion  ";
     cin >> x;
-    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion";
+    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion ";
     cin >> y;
-    cout << "Ingrese el valor de la ecuacion";
+    cout << "Ingrese el valor de la ecuacion ";
     cin >> r;
-    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion";
+    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion ";
     cin >> X;
-    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion";
+    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion ";
     cin >> Y;
-    cout << "Ingrese el valor de la segunda ecuacion";
+    cout << "Ingrese el valor de la segunda ecuacion ";
     cin >> R;
     Ejercicio->x=x;
     Ejercicio->y=y;
@@ -66,20 +65,23 @@ void Desarrollo(D* Ejercicio){
     float determinanteSistema = (uno[0] * dos[1])-(uno[1] * dos[0]);
     cout<<determinanteSistema<<endl;
     //Determinante de la X.
-    float determinanteX = (uno[3] * dos[1])-(uno[3] * dos[0]);
+    float determinanteX = (uno[2] * dos[1])-(dos[2] * uno[1]);
     cout<<determinanteX<<endl;
     //Determinante de la Y.
-    float determianteY = (uno[0] * dos[3]) - (uno[3] * dos[0]);
+    float determianteY = (uno[0] * dos[2]) - (uno[2] * dos[0]);
     cout<<determianteY<<endl;
-    /*Division de los Coeficientes
+    //Division de los Coeficientes
     float ValorX = (determinanteX/determinanteSistema);
-    float ValorY = (determinanteX/determinanteSistema);
+    float ValorY = (determianteY/determinanteSistema);
     float Resultado[2] = {ValorX,ValorY};
-    cout << ValorX << "," << ValorY;*/
+    Ejercicio->ResultadoX=Resultado[0];
+    Ejercicio->ResultadoY=Resultado[1];
+
 }
 
-void ImprimirResultados(float Resultado){
+void ImprimirResultados(D* Ejercicio){
+    float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY};
     cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
-    cout << "(" << Resultado << "," << ")" << endl;
+    cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
     cout << "Gracias por preferir NeoTel Companny" << endl;
 }
