@@ -82,3 +82,4 @@ void ImprimirResultados(float Resultado){
     cout << "(" << Resultado << "," << ")" << endl;
     cout << "Gracias por preferir NeoTel Companny" << endl;
 }
+//s
