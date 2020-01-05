@@ -169,9 +169,38 @@ void DesarrolloTres(T* Ejercicio){
     float DeterminanteSistemaA =
             (uno[0] * dos[1] * tres[2]) + (dos[0] * tres[1] * uno[2]) + (tres[0] * uno[1] * dos[2]);
     float DeterminanteSistemaB =
-            (uno[2] * dos[1] * tres[0]) + (dos[2] * tres[1] * uno[0]) + (tres[2] * uno[1] * dos[1]);
+            (uno[2] * dos[1] * tres[0]) + (dos[2] * tres[1] * uno[0]) + (tres[2] * uno[1] * dos[0]);
     float DeterminanteSistema = DeterminanteSistemaA - DeterminanteSistemaB;
     //Determinante X
+    float DeterminanteXA =
+            (uno[3] * dos[1] * tres[2]) + (dos[2] * tres[3] * uno[1]) + (tres[1] * uno[2] * dos[3]);
+    float DeterminanteXB =
+            (uno[2] * dos[1] * tres[3]) + (dos[2] * tres[1] * uno[3]) + (tres[2] * uno[1] * dos[3]);
+    float DeterminanteX = DeterminanteXA - DeterminanteXB;
     //Determinante Y
+    float DeterminanteYA =
+            (uno[0] * dos[3] * tres[2]) + (dos[2] * tres[0] * uno[3]) + (tres[3] * uno[2] * dos[0]);
+    float DeterminanteYB =
+            (uno[2] * dos[3] * tres[0]) + (dos[2] * tres[3] * uno[0]) + (tres[2] * uno[3] * dos[0]);
+    float DeterminanteY = DeterminanteYA - DeterminanteYB;
     //Determinante Z
+    float DeterminanteZA =
+            (uno[0] * dos[1] * tres[3]) + (dos[3] * tres[0] * uno[1]) + (tres[1] * uno[3] * dos[0]);
+    float DeterminanteZB =
+            (uno[3] * dos[1] * tres[0]) + (dos[3] * tres[1] * uno[0]) + (tres[3] * uno[1] * dos[0]);
+    float DeterminanteZ = DeterminanteZA - DeterminanteZB;
+    //Valores incognitas
+    float ValorX = (DeterminanteX/DeterminanteSistema);
+    float ValorY = (DeterminanteY/DeterminanteSistema);
+    float ValorZ = (DeterminanteZ/DeterminanteSistema);
+    float Resultados[3] = {ValorX, ValorY, ValorZ};
+    Ejercicio->ResultadoX=Resultados[0];
+    Ejercicio->ResultadoY=Resultados[1];
+    Ejercicio->ResultadoZ=Resultados[2];
+}
+void ImprimirResultadosTres(T* Ejercicio){
+    float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY,Ejercicio->ResultadoZ};
+    cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
+    cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << ")" << endl;
+    cout << endl << endl;
 }
