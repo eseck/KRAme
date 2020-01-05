@@ -27,12 +27,32 @@ void Desarrollo(D* X);
 void ImprimirResultados(D* X);
 
 int main() {
-    D* ejercicio = new D;
-    Insertar(ejercicio);
-    Desarrollo(ejercicio);
-    ImprimirResultados(ejercicio);
-    delete(ejercicio);
+    int Tipo
+    cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny.";
+    do {
+        cout << "Por favor, elija que tipo de matriz planea usar."
+        cin >> Tipo;
+        switch(Tipo) {
+            case 1:
+                // Desarrollo para un 2x2
+                D* ejercicio = new D;
+                Insertar(ejercicio);
+                Desarrollo(ejercicio);
+                ImprimirResultados(ejercicio)
+                delete(ejercicio);
+            case 2:
+                // Desarrollo para un 3x3
+                D* ejercicio = new D;
+            case 3:
+                // Desarrollo para un 4x4
+                D* ejercicio = new D;
+            case 4:
+                cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!"
+        }
+    }
+    while(Tipo != 4);
     return 0;
+}
 }
 
 void Insertar(D* Ejercicio){
