@@ -39,9 +39,9 @@ void InsertarDos(D* X);
 void DesarrolloDos(D* X);
 void ImprimirResultadosDos(D* X);
 //Funcion para Resolver un sistema 3x3
-void InsertarTres();
-void DesarrolloTres(D* X);
-void ImprimirResultadosTres(D* X);
+void InsertarTres(T* Ejercicio);
+void DesarrolloTres(T* X);
+void ImprimirResultadosTres(T* X);
 //Main
 int main() {
     int Tipo;
@@ -160,21 +160,16 @@ void InsertarTres(T* Ejercicio) {
     Ejercicio->aR=aR;
 }
 void DesarrolloTres(T* Ejercicio){
-float uno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->z,Ejercicio->r};
-float dos[4] = {Ejercicio->X,Ejercicio->Y,Ejercicio->Z,Ejercicio->R};
-float tres[4] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aZ,Ejercicio->aR};
-//determinante Sistema
-float DeterminanteSistemaA = (uno[0]*dos[1]*tres[2])+(dos[0]*tres[1]*uno[2])+(tres[0]*uno[1]*dos[2]);
-float DeterminanteSistemaB = (uno[2]*dos[1]*tres[0])+(dos[2]*tres[1]*uno[0])+(tres[2]*uno[1]*dos[1]);
-float DeterminanteSistema= DeterminanteSistemaA-DeterminanteSistemaB;
-//Determinante X
-//Determinante Y
-//Determinante Z
-
-void DesarrolloTres(T* X){
+    float uno[4] = {Ejercicio->x, Ejercicio->y, Ejercicio->z, Ejercicio->r};
+    float dos[4] = {Ejercicio->X, Ejercicio->Y, Ejercicio->Z, Ejercicio->R};
+    float tres[4] = {Ejercicio->aX, Ejercicio->aY, Ejercicio->aZ, Ejercicio->aR};
+    //determinante Sistema
+    float DeterminanteSistemaA =
+            (uno[0] * dos[1] * tres[2]) + (dos[0] * tres[1] * uno[2]) + (tres[0] * uno[1] * dos[2]);
+    float DeterminanteSistemaB =
+            (uno[2] * dos[1] * tres[0]) + (dos[2] * tres[1] * uno[0]) + (tres[2] * uno[1] * dos[1]);
+    float DeterminanteSistema = DeterminanteSistemaA - DeterminanteSistemaB;
+    //Determinante X
+    //Determinante Y
+    //Determinante Z
 }
-void ImprimirResultadosTres(T* X){
-}
-}
-void ImprimirResultadosTres(T* X){}
-//Ultimo
