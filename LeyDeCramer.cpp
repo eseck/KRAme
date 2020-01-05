@@ -105,6 +105,9 @@ void ImprimirResultadosDos(D* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
     cout << endl << endl;
 }
-void InsertarTres(T* X){}
-void DesarrolloTres(T* X){}
-void ImprimirResultadosTres(T* X){}
+
+void InsertarTres(T* Desarrolo){
+    cout<<"Hla";
+}
+void DesarrolloTres(T* Desarrollo){}
+void ImprimirResultadosTres(T* Desarrollo){}
