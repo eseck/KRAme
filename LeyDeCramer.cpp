@@ -204,3 +204,4 @@ void ImprimirResultadosTres(T* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << ")" << endl;
     cout << endl << endl;
 }
+//eskere
