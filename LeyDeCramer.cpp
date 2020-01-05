@@ -1,12 +1,10 @@
 //
 // Created by TheusZero and Eseck for on NeoTel Companny 04-01-2020.
 //
-
 #include <iostream>
 #include <math.h>
 #include <string>
 using namespace std;
-
 //Declaraciones de Estructuras
 typedef struct dosXdos{
     float x;
@@ -18,13 +16,22 @@ typedef struct dosXdos{
     float ResultadoX;
     float ResultadoY;
 }D;
-
+typedef struct tresXtres{
+    float x;
+    float y;
+    float z;
+    float r;
+    float X;
+    float Y;
+    float Z;
+    float R;
+}T;
 //Declaraciones de Funciones
-
 //Funciones para Resolver un sistema 2X2
-void Insertar(D* X);
-void Desarrollo(D* X);
-void ImprimirResultados(D* X);
+void InsertarDos(D* X);
+void DesarrolloDos(D* X);
+void ImprimirResultadosDos(D* X);
+//Funcion para Resolver un sistema 3x3
 
 int main() {
     int Tipo;
@@ -36,9 +43,9 @@ int main() {
         switch(Tipo) {
             case 1:
                 // Desarrollo para un 2x2
-                Insertar(ejercicio);
-                Desarrollo(ejercicio);
-                ImprimirResultados(ejercicio);
+                InsertarDos(ejercicio);
+                DesarrolloDos(ejercicio);
+                ImprimirResultadosDos(ejercicio);
                 delete(ejercicio);
                 break;
             case 2:
@@ -49,9 +56,7 @@ int main() {
     while(Tipo != 4);
     return 0;
 }
-
-
-void Insertar(D* Ejercicio){
+void InsertarDos(D* Ejercicio){
     float x,y,r,X,Y,R;
     cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
     cin >> x;
@@ -72,8 +77,7 @@ void Insertar(D* Ejercicio){
     Ejercicio->Y=Y;
     Ejercicio->R=R;
 }
-
-void Desarrollo(D* Ejercicio){
+void DesarrolloDos(D* Ejercicio){
     //arrays para ordenar los valores
     float uno[3] = {Ejercicio->x,Ejercicio->y,Ejercicio->r};
     float dos[3] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R};
@@ -93,9 +97,9 @@ void Desarrollo(D* Ejercicio){
     Ejercicio->ResultadoX=Resultado[0];
     Ejercicio->ResultadoY=Resultado[1];
 }
-
-void ImprimirResultados(D* Ejercicio){
+void ImprimirResultadosDos(D* Ejercicio){
     float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY};
     cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
     cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
+    cout << endl << endl;
 }
