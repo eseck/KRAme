@@ -33,7 +33,9 @@ typedef struct tresXtres{
     float ResultadoY;
     float ResultadoZ;
 }T;
-typedef struct cuatroXcuatro{}C;
+typedef struct cuatroXcuatro{
+    float x,y,z,w,r,X,Y,Z,W,R,aX,aY,aZ,aW,aR,ax,ay,az,aw,ar;
+}C;
 //Declaraciones de Funciones
 //Funciones para Resolver un sistema 2x2
 void InsertarDos(D* X);
@@ -210,6 +212,42 @@ void ImprimirResultadosTres(T* Ejercicio){
     cout << endl << endl;
 }
 //Funciones4X4
-void InsertarCuatro(C* Ejercicio){}
+void InsertarCuatro(C* Ejercicio){
+    float x,y,z,w,r,X,Y,Z,W,R,aX,aY,aZ,aW,aR,ax,ay,az,aw,ar;
+    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;cin >> x;
+    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;cin >> y;
+    cout << "Ingrese el valor que acompañara al Z para la primera ecuacion"<<endl;cin >> z;
+    cout << "Ingrese el valor de la ecuacion"<<endl;cin >> r;
+    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;cin >> X;
+    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;cin >> Y;
+    cout << "Ingrese el valor que acompañara al Z para la segunda ecuacion"<<endl;cin >> Z;
+    cout << "Ingrese el valor de la segunda ecuacion"<<endl;cin >> R;
+    cout << "Ingrese el valor que acompañara al X para la tercera ecuacion"<<endl;cin >> aX;
+    cout << "Ingrese el valor que acompañara al Y para la tercera ecuacion"<<endl;cin >> aY;
+    cout << "Ingrese el valor que acompañara al Z para la tercera ecuacion"<<endl;cin >> aZ;
+    cout << "Ingrese el valor de la tercera ecuacion"<<endl;cin >> aR;
+    cout << "Ingrese el valor que acompañara al X para la cuarta ecuacion"<<endl;cin >> ax;
+    cout << "Ingrese el valor que acompañara al Y para la cuarta ecuacion"<<endl;cin >> ay;
+    cout << "Ingrese el valor que acompañara al Z para la cuarta ecuacion"<<endl;cin >> az;
+    cout << "Ingrese el valor que acompañara al W para la cuarta ecuacion"<<endl;cin >> aw;
+    cout << "Ingrese el valor para la cuarta ecuacion"<<endl;cin >> ar;
+    Ejercicio->z=z;
+    Ejercicio->x=x;
+    Ejercicio->y=y;
+    Ejercicio->r=r;
+    Ejercicio->Z=Z;
+    Ejercicio->X=X;
+    Ejercicio->Y=Y;
+    Ejercicio->R=R;
+    Ejercicio->aZ=aZ;
+    Ejercicio->aX=aX;
+    Ejercicio->aY=aY;
+    Ejercicio->aR=aR;
+    Ejercicio->ax=ax;
+    Ejercicio->ay=ay;
+    Ejercicio->aw=aw;
+    Ejercicio->az=az;
+    Ejercicio->ar=ar;
+}
 void DesarrolloCuatro(C* Ejercicio){}
 void ImprimirResultadosCuatro(C* Ejercicio){}
