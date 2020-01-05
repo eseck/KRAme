@@ -25,6 +25,13 @@ typedef struct tresXtres{
     float Y;
     float Z;
     float R;
+    float aX;
+    float aY;
+    float aZ;
+    float aR;
+    float ResultadoX;
+    float ResultadoY;
+    float ResultadoZ;
 }T;
 //Declaraciones de Funciones
 //Funciones para Resolver un sistema 2X2
@@ -51,6 +58,10 @@ int main() {
                 delete(ejercicio);
                 break;
             case 2:
+                InsertarTres(ejercicio)
+                DesarrolloTres(ejercicio)
+                ImprimirResultadosTres(ejercicio)
+            case 3:
                 cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
                 break;
         }
@@ -105,6 +116,47 @@ void ImprimirResultadosDos(D* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
     cout << endl << endl;
 }
-void InsertarTres(D* X);
-void DesarrolloTres(D* X);
+void InsertarTres(D* X);{
+    float x,y,z,r,X,Y,Z,R,aX,aY,aZ,aR;
+    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
+    cin >> x;
+    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;
+    cin >> y;
+    cout << "Ingrese el valor que acompañara al Z para la primera ecuacion"<<endl;
+    cin >> z;
+    cout << "Ingrese el valor de la ecuacion"<<endl;
+    cin >> r;
+    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;
+    cin >> X;
+    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;
+    cin >> Y;
+    cout << "Ingrese el valor que acompañara al Z para la segunda ecuacion"<<endl;
+    cin >> Z;
+    cout << "Ingrese el valor de la segunda ecuacion"<<endl;
+    cin >> R;
+    cout << "Ingrese el valor que acompañara al X para la tercera ecuacion"<<endl;
+    cin >> aX;
+    cout << "Ingrese el valor que acompañara al Y para la tercera ecuacion"<<endl;
+    cin >> aY;
+    cout << "Ingrese el valor que acompañara al Z para la tercera ecuacion"<<endl;
+    cin >> aZ;
+    cout << "Ingrese el valor de la tercera ecuacion"<<endl;
+    cin >> aR;
+    Ejercicio->z=z;
+    Ejercicio->x=x;
+    Ejercicio->y=y;
+    Ejercicio->r=r;
+    Ejercicio->Z=Z;
+    Ejercicio->X=X;
+    Ejercicio->Y=Y;
+    Ejercicio->R=R;
+    Ejercicio->aZ=aZ;
+    Ejercicio->aX=aX;
+    Ejercicio->aY=aY;
+    Ejercicio->aR=aR;
+}
+void DesarrolloTres(D* X);{
+
+}
 void ImprimirResultadosTres(D* X);
+
