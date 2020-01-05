@@ -32,7 +32,9 @@ void InsertarDos(D* X);
 void DesarrolloDos(D* X);
 void ImprimirResultadosDos(D* X);
 //Funcion para Resolver un sistema 3x3
-
+void InsertarTres(D* X);
+void DesarrolloTres(D* X);
+void ImprimirResultadosTres(D* X);
 int main() {
     int Tipo;
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny."<<endl;
@@ -103,3 +105,6 @@ void ImprimirResultadosDos(D* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
     cout << endl << endl;
 }
+void InsertarTres(T* X){}
+void DesarrolloTres(T* X){}
+void ImprimirResultadosTres(T* X){}
