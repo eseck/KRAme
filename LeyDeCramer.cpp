@@ -27,10 +27,10 @@ void Desarrollo(D* X);
 void ImprimirResultados(D* X);
 
 int main() {
-    int Tipo
+    int Tipo;
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny.";
     do {
-        cout << "Por favor, elija que tipo de matriz planea usar."
+        cout << "Por favor, elija que tipo de matriz planea usar.";
         cin >> Tipo;
         switch(Tipo) {
             case 1:
@@ -38,36 +38,32 @@ int main() {
                 D* ejercicio = new D;
                 Insertar(ejercicio);
                 Desarrollo(ejercicio);
-                ImprimirResultados(ejercicio)
+                ImprimirResultados(ejercicio);
                 delete(ejercicio);
+                break;
             case 2:
-                // Desarrollo para un 3x3
-                D* ejercicio = new D;
-            case 3:
-                // Desarrollo para un 4x4
-                D* ejercicio = new D;
-            case 4:
-                cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!"
+                cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
+                break;
         }
     }
     while(Tipo != 4);
     return 0;
 }
-}
+
 
 void Insertar(D* Ejercicio){
     float x,y,r,X,Y,R;
-    cout << "Ingrese el valor que acompañara al X para la primera ecuacion  ";
+    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
     cin >> x;
-    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion ";
+    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;
     cin >> y;
-    cout << "Ingrese el valor de la ecuacion ";
+    cout << "Ingrese el valor de la ecuacion"<<endl;
     cin >> r;
-    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion ";
+    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;
     cin >> X;
-    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion ";
+    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;
     cin >> Y;
-    cout << "Ingrese el valor de la segunda ecuacion ";
+    cout << "Ingrese el valor de la segunda ecuacion"<<endl;
     cin >> R;
     Ejercicio->x=x;
     Ejercicio->y=y;
@@ -96,7 +92,6 @@ void Desarrollo(D* Ejercicio){
     float Resultado[2] = {ValorX,ValorY};
     Ejercicio->ResultadoX=Resultado[0];
     Ejercicio->ResultadoY=Resultado[1];
-
 }
 
 void ImprimirResultados(D* Ejercicio){
