@@ -217,14 +217,17 @@ void InsertarCuatro(C* Ejercicio){
     cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;cin >> x;
     cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;cin >> y;
     cout << "Ingrese el valor que acompañara al Z para la primera ecuacion"<<endl;cin >> z;
+    cout << "Ingrese el valor que acompañara al W para la primera ecuacion"<<endl;cin >> w;
     cout << "Ingrese el valor de la ecuacion"<<endl;cin >> r;
     cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;cin >> X;
     cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;cin >> Y;
     cout << "Ingrese el valor que acompañara al Z para la segunda ecuacion"<<endl;cin >> Z;
+    cout << "Ingrese el valor que acompañara al W para la segunda ecuacion"<<endl;cin >> W;
     cout << "Ingrese el valor de la segunda ecuacion"<<endl;cin >> R;
     cout << "Ingrese el valor que acompañara al X para la tercera ecuacion"<<endl;cin >> aX;
     cout << "Ingrese el valor que acompañara al Y para la tercera ecuacion"<<endl;cin >> aY;
     cout << "Ingrese el valor que acompañara al Z para la tercera ecuacion"<<endl;cin >> aZ;
+    cout << "Ingrese el valor que acompañara al W para la tercera ecuacion"<<endl;cin >> aW;
     cout << "Ingrese el valor de la tercera ecuacion"<<endl;cin >> aR;
     cout << "Ingrese el valor que acompañara al X para la cuarta ecuacion"<<endl;cin >> ax;
     cout << "Ingrese el valor que acompañara al Y para la cuarta ecuacion"<<endl;cin >> ay;
@@ -235,6 +238,9 @@ void InsertarCuatro(C* Ejercicio){
     Ejercicio->x=x;
     Ejercicio->y=y;
     Ejercicio->r=r;
+    Ejercicio->w=w;
+    Ejercicio->W=W;
+    Ejercicio->aW=aW;
     Ejercicio->Z=Z;
     Ejercicio->X=X;
     Ejercicio->Y=Y;
