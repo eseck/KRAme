@@ -29,13 +29,13 @@ void ImprimirResultados(D* X);
 int main() {
     int Tipo;
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny.";
+    D* ejercicio = new D;
     do {
         cout << "Por favor, elija que tipo de matriz planea usar.";
         cin >> Tipo;
         switch(Tipo) {
             case 1:
                 // Desarrollo para un 2x2
-                D* ejercicio = new D;
                 Insertar(ejercicio);
                 Desarrollo(ejercicio);
                 ImprimirResultados(ejercicio);
