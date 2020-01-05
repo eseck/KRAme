@@ -33,8 +33,9 @@ typedef struct tresXtres{
     float ResultadoY;
     float ResultadoZ;
 }T;
+typedef struct cuatroXcuatro{}C;
 //Declaraciones de Funciones
-//Funciones para Resolver un sistema 2X2
+//Funciones para Resolver un sistema 2x2
 void InsertarDos(D* X);
 void DesarrolloDos(D* X);
 void ImprimirResultadosDos(D* X);
@@ -42,6 +43,10 @@ void ImprimirResultadosDos(D* X);
 void InsertarTres(T* X);
 void DesarrolloTres(T* X);
 void ImprimirResultadosTres(T* X);
+//Funcion para Resolver un sistema 4x4
+void InsertarCuatro(C* X);
+void DesarrolloCuatro(C* X);
+void ImprimirResultadosCuatro(C* X);
 //Main
 int main() {
     int Tipo;
@@ -204,3 +209,7 @@ void ImprimirResultadosTres(T* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << ")" << endl;
     cout << endl << endl;
 }
+//Funciones4X4
+void InsertarCuatro(C* Ejercicio){}
+void DesarrolloCuatro(C* Ejercicio){}
+void ImprimirResultadosCuatro(C* Ejercicio){}
