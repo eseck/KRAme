@@ -222,6 +222,9 @@ void InsertarCuatro(C* Ejercicio){
     Ejercicio->aW=aW;Ejercicio->aZ=aZ;Ejercicio->aX=aX;Ejercicio->aY=aY;Ejercicio->aR=aR;
     Ejercicio->ax=ax;Ejercicio->ay=ay;Ejercicio->aw=aw;Ejercicio->az=az;Ejercicio->ar=ar;
 }
-void DesarrolloCuatro(C* Ejercicio){}
+void DesarrolloCuatro(C* Ejercicio){
+    float FilaUno[5] = {Ejercicio->Y,Ejercicio->Z,Ejercicio->W,Ejercicio->R};
+    float FilaDos[5] = {Ejercicio->aY,Ejercicio->aZ,Ejercicio->aW,Ejercicio->aR};
+    float FilaTres[5] = {Ejercicio->ay,Ejercicio->az,Ejercicio->aw,Ejercicio->ar};
+}
 void ImprimirResultadosCuatro(C* Ejercicio){}
-
