@@ -39,9 +39,10 @@ void InsertarDos(D* X);
 void DesarrolloDos(D* X);
 void ImprimirResultadosDos(D* X);
 //Funcion para Resolver un sistema 3x3
-void InsertarTres(D* X);
+void InsertarTres();
 void DesarrolloTres(D* X);
 void ImprimirResultadosTres(D* X);
+//Main
 int main() {
     int Tipo;
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny."<<endl;
@@ -58,9 +59,10 @@ int main() {
                 delete(ejercicio);
                 break;
             case 2:
-                InsertarTres(ejercicio)
-                DesarrolloTres(ejercicio)
-                ImprimirResultadosTres(ejercicio)
+                InsertarTres();
+                DesarrolloTres(ejercicio);
+                ImprimirResultadosTres(ejercicio);
+                break;
             case 3:
                 cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
                 break;
@@ -69,6 +71,7 @@ int main() {
     while(Tipo != 4);
     return 0;
 }
+//Funciones2X2
 void InsertarDos(D* Ejercicio){
     float x,y,r,X,Y,R;
     cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
@@ -116,7 +119,8 @@ void ImprimirResultadosDos(D* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
     cout << endl << endl;
 }
-void InsertarTres(D* X);{
+//Funciones3X3
+void InsertarTres(T* Ejercicio) {
     float x,y,z,r,X,Y,Z,R,aX,aY,aZ,aR;
     cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;
     cin >> x;
@@ -155,19 +159,7 @@ void InsertarTres(D* X);{
     Ejercicio->aY=aY;
     Ejercicio->aR=aR;
 }
-void DesarrolloTres(D* X);{
-    float uno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->z,Ejercicio->r};
-    float dos[4] = {Ejercicio->X,Ejercicio->Y,Ejercicio->Z,Ejercicio->R};
-    float tres[4] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aZ,Ejercicio->aR};
-    //determinante Sistema
-    float DeterminanteSistemaA = (uno[0]*dos[1]*tres[2])+(dos[0]*tres[1]*uno[2])+(tres[0]*uno[1]*dos[2]);
-    float DeterminanteSistemaB = (uno[2]*dos[1]*tres[0])+(dos[2]*tres[1]*uno[0])+(tres[2]*uno[1]*dos[1]);
-    float DeterminanteSistema= DeterminanteSistemaA-DeterminanteSistemaB;
-    //Determinante X
-    float
-    //Determinante Y
-    //Determinante Z
-
+void DesarrolloTres(T* X){
 }
 void ImprimirResultadosTres(D* X);
 
