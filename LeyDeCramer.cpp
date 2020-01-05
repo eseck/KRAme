@@ -159,7 +159,22 @@ void InsertarTres(T* Ejercicio) {
     Ejercicio->aY=aY;
     Ejercicio->aR=aR;
 }
+void DesarrolloTres(D* X);{
+float uno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->z,Ejercicio->r};
+float dos[4] = {Ejercicio->X,Ejercicio->Y,Ejercicio->Z,Ejercicio->R};
+float tres[4] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aZ,Ejercicio->aR};
+//determinante Sistema
+float DeterminanteSistemaA = (uno[0]*dos[1]*tres[2])+(dos[0]*tres[1]*uno[2])+(tres[0]*uno[1]*dos[2]);
+float DeterminanteSistemaB = (uno[2]*dos[1]*tres[0])+(dos[2]*tres[1]*uno[0])+(tres[2]*uno[1]*dos[1]);
+float DeterminanteSistema= DeterminanteSistemaA-DeterminanteSistemaB;
+//Determinante X
+float
+//Determinante Y
+//Determinante Z
+
+=======
 void DesarrolloTres(T* X){
 }
 void ImprimirResultadosTres(D* X);
 
+//Ultimo
