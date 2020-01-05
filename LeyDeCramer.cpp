@@ -200,26 +200,10 @@ void InsertarCuatro(C* Ejercicio){
     cout << "Ingrese el valor que acompañara al Z para la cuarta ecuacion"<<endl;cin >> az;
     cout << "Ingrese el valor que acompañara al W para la cuarta ecuacion"<<endl;cin >> aw;
     cout << "Ingrese el valor para la cuarta ecuacion"<<endl;cin >> ar;
-    Ejercicio->z=z;
-    Ejercicio->x=x;
-    Ejercicio->y=y;
-    Ejercicio->r=r;
-    Ejercicio->w=w;
-    Ejercicio->W=W;
-    Ejercicio->aW=aW;
-    Ejercicio->Z=Z;
-    Ejercicio->X=X;
-    Ejercicio->Y=Y;
-    Ejercicio->R=R;
-    Ejercicio->aZ=aZ;
-    Ejercicio->aX=aX;
-    Ejercicio->aY=aY;
-    Ejercicio->aR=aR;
-    Ejercicio->ax=ax;
-    Ejercicio->ay=ay;
-    Ejercicio->aw=aw;
-    Ejercicio->az=az;
-    Ejercicio->ar=ar;
+    Ejercicio->z=z;Ejercicio->x=x;Ejercicio->y=y;Ejercicio->r=r;Ejercicio->w=w;
+    Ejercicio->W=W;Ejercicio->Z=Z;Ejercicio->X=X;Ejercicio->Y=Y;Ejercicio->R=R;
+    Ejercicio->aW=aW;Ejercicio->aZ=aZ;Ejercicio->aX=aX;Ejercicio->aY=aY;Ejercicio->aR=aR;
+    Ejercicio->ax=ax;Ejercicio->ay=ay;Ejercicio->aw=aw;Ejercicio->az=az;Ejercicio->ar=ar;
 }
 void DesarrolloCuatro(C* Ejercicio){}
 void ImprimirResultadosCuatro(C* Ejercicio){}
