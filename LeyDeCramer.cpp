@@ -28,7 +28,7 @@ void ImprimirResultados(D* X);
 
 int main() {
     int Tipo;
-    cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny.";
+    cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny."<<endl;
     D* ejercicio = new D;
     do {
         cout << "Por favor, elija que tipo de matriz planea usar.";
@@ -98,5 +98,4 @@ void ImprimirResultados(D* Ejercicio){
     float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY};
     cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
     cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
-    cout << "Gracias por preferir NeoTel Companny" << endl;
 }
