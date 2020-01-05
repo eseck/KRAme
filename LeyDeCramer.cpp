@@ -46,22 +46,24 @@ void ImprimirResultadosTres(T* X);
 int main() {
     int Tipo;
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny."<<endl;
-    D* ejercicio = new D;
+    D* ejercicioDos = new D;
+    T* ejercicioTres = new T;
     do {
         cout << "Por favor, elija que tipo de matriz planea usar.";
         cin >> Tipo;
         switch(Tipo) {
             case 1:
                 // Desarrollo para un 2x2
-                InsertarDos(ejercicio);
-                DesarrolloDos(ejercicio);
-                ImprimirResultadosDos(ejercicio);
-                delete(ejercicio);
+                InsertarDos(ejercicioDos);
+                DesarrolloDos(ejercicioDos);
+                ImprimirResultadosDos(ejercicioDos);
+                delete(ejercicioDos);
                 break;
             case 2:
-                void InsertarTres(T* X);
-                void DesarrolloTres(T* X);
-                void ImprimirResultadosTres(T* X);
+                InsertarTres(ejercicioTres);
+                DesarrolloTres(ejercicioTres);
+                ImprimirResultadosTres(ejercicioTres);
+                delete(ejercicioTres);
                 break;
             case 3:
                 cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
