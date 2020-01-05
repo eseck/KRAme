@@ -23,7 +23,7 @@ typedef struct dosXdos{
 
 //Funciones para Resolver un sistema 2X2
 void Insertar(D* X);
-void Desarrollo(D X);
+void Desarrollo2x2(D X);
 void ImprimirResultados(float Resultado);
 
 
@@ -57,7 +57,7 @@ void Insertar(D* Ejercicio){
     Ejercicio->R=R;
 }
 
-void Desarrollo(D Ejercicio){
+void Desarrollo2x2(D Ejercicio){
     //arrays para ordenar los valores
     float uno[3] = {Ejercicio.x,Ejercicio.y,Ejercicio.r};
     float dos[3] = {Ejercicio.X,Ejercicio.Y,Ejercicio.R};
