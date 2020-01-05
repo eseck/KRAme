@@ -34,6 +34,7 @@ void InsertarCuatro(C* X);
 void DesarrolloCuatro(C* X);
 void ImprimirResultadosCuatro(C* X);
 //Main
+// cuando colocamos un string en el main o las funciones insertar,se ejecuta una sola linea de cout infinitamente
 int main() {
     int Tipo;
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny."<<endl;
@@ -59,26 +60,42 @@ int main() {
             case 3:
                 cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
                 break;
+            default:
+                cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
+                Tipo= 4;
+                break;
         }
+        continue;
     }
     while(Tipo != 4);
     return 0;
 }
 //Funciones2X2
 void InsertarDos(D* Ejercicio){
-    float x,y,r,X,Y,R;
-    cout << "Ingrese el valor que acompañara al X para la primera ecuacion"<<endl;cin >> x;
-    cout << "Ingrese el valor que acompañara al Y para la primera ecuacion"<<endl;cin >> y;
-    cout << "Ingrese el valor de la ecuacion"<<endl;cin >> r;
-    cout << "Ingrese el valor que acompañara al X para la segunda ecuacion"<<endl;cin >> X;
-    cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion"<<endl;cin >> Y;
-    cout << "Ingrese el valor de la segunda ecuacion"<<endl;cin >> R;
-    Ejercicio->x=x;
-    Ejercicio->y=y;
-    Ejercicio->r=r;
-    Ejercicio->X=X;
-    Ejercicio->Y=Y;
-    Ejercicio->R=R;
+    try {
+        float x, y, r, X, Y, R;
+        cout << "Ingrese el valor que acompañara al X para la primera ecuacion" << endl;
+        cin >> x;
+        cout << "Ingrese el valor que acompañara al Y para la primera ecuacion" << endl;
+        cin >> y;
+        cout << "Ingrese el valor de la ecuacion" << endl;
+        cin >> r;
+        cout << "Ingrese el valor que acompañara al X para la segunda ecuacion" << endl;
+        cin >> X;
+        cout << "Ingrese el valor que acompañara al Y para la segunda ecuacion" << endl;
+        cin >> Y;
+        cout << "Ingrese el valor de la segunda ecuacion" << endl;
+        cin >> R;
+        Ejercicio->x = x;
+        Ejercicio->y = y;
+        Ejercicio->r = r;
+        Ejercicio->X = X;
+        Ejercicio->Y = Y;
+        Ejercicio->R = R;
+    }
+    catch (invalid_argument){
+        cout<<"skere";
+    }
 }
 void DesarrolloDos(D* Ejercicio){
     //arrays para ordenar los valores
@@ -207,3 +224,4 @@ void InsertarCuatro(C* Ejercicio){
 }
 void DesarrolloCuatro(C* Ejercicio){}
 void ImprimirResultadosCuatro(C* Ejercicio){}
+
