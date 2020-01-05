@@ -64,13 +64,13 @@ void Desarrollo(D* Ejercicio){
     float dos[3] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R};
     //Determinante Sistema.
     float determinanteSistema = (uno[0] * dos[1])-(uno[1] * dos[0]);
-    cout<<determinanteSistema;
+    cout<<determinanteSistema<<endl;
     //Determinante de la X.
     float determinanteX = (uno[3] * dos[1])-(uno[3] * dos[0]);
-    cout<<determinanteX;
+    cout<<determinanteX<<endl;
     //Determinante de la Y.
     float determianteY = (uno[0] * dos[3]) - (uno[3] * dos[0]);
-    cout<<determianteY;
+    cout<<determianteY<<endl;
     /*Division de los Coeficientes
     float ValorX = (determinanteX/determinanteSistema);
     float ValorY = (determinanteX/determinanteSistema);
