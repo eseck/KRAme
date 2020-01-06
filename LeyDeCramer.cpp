@@ -329,7 +329,7 @@ void DesarrolloCuatroZ(C* Ejercicio){
     float TresDiagonal= ((TresFilaUno[0]*TresFilaDos[1]*TresFilaTres[2])+(TresFilaUno[1]*TresFilaDos[2]*TresFilaTres[3])+(TresFilaUno[2]*TresFilaDos[3]*TresFilaTres[4])) - ((TresFilaUno[4]*TresFilaDos[3]*TresFilaTres[2])+(TresFilaUno[3]*TresFilaDos[2]*TresFilaTres[1])+(TresFilaUno[2]*TresFilaDos[1]*TresFilaTres[0]));
     float CuatroFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R,Ejercicio->X,Ejercicio->Y};
     float CuatroFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aR,Ejercicio->aX,Ejercicio->aY};
-    float CuatroFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->az,Ejercicio->ax,Ejercicio->ay};
+    float CuatroFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->ar,Ejercicio->ax,Ejercicio->ay};
     float CuatroDiagonal= ((CuatroFilaUno[0]*CuatroFilaDos[1]*CuatroFilaTres[2])+(CuatroFilaUno[1]*CuatroFilaDos[2]*CuatroFilaTres[3])+(CuatroFilaUno[2]*CuatroFilaDos[3]*CuatroFilaTres[4])) - ((CuatroFilaUno[4]*CuatroFilaDos[3]*CuatroFilaTres[2])+(CuatroFilaUno[3]*CuatroFilaDos[2]*CuatroFilaTres[1])+(CuatroFilaUno[2]*CuatroFilaDos[1]*CuatroFilaTres[0]));
     float ResultadoZ = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
     cout<<"El Determinante de Z es: "<<ResultadoZ<<endl;
@@ -364,3 +364,4 @@ void Imprimir(C* Ejercicio){
     cout << endl << endl;
 }
 //Termino Del Programa
+//Arreglar Z 4X4 det
