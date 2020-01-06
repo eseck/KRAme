@@ -253,7 +253,7 @@ void DesarrolloCuatro(C* Ejercicio){
     float CuatroDiagonal= ((UnoFilaUno[0]*UnoFilaDos[1]*UnoFilaTres[2])+(UnoFilaUno[1]*UnoFilaDos[2]*UnoFilaTres[3])+(UnoFilaUno[2]*UnoFilaDos[3]*UnoFilaTres[4])) - ((UnoFilaUno[4]*UnoFilaDos[3]*UnoFilaTres[2])+(UnoFilaUno[3]*UnoFilaDos[2]*UnoFilaTres[1])+(UnoFilaUno[2]*UnoFilaDos[1]*UnoFilaTres[0]));
 
     float ResultadoUno = (((Ejercicio->x)*(UnoDiagonal)*(1))+((Ejercicio->y)*(DosDiagonal)*(-1))+((Ejercicio->z)*(TresDiagonal)*(1))+((Ejercicio->w)*(CuatroDiagonal)*(-1)));
-
+    cout<<endl<<ResultadoUno;
 }
 
 void ImprimirResultadosCuatro(C* Ejercicio){}
