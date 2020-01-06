@@ -2,7 +2,6 @@
 // Created by TheusZero and Eseck for on NeoTel Companny 04-01-2020.
 //
 #include <iostream>
-#include <math.h>
 #include <string>
 using namespace std;
 //Declaraciones de Estructuras
@@ -364,3 +363,4 @@ void Imprimir(C* Ejercicio){
     cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << "," << resultado[3] << ")" << endl;
     cout << endl << endl;
 }
+//Termino Del Programa
