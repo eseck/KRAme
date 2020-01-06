@@ -39,6 +39,7 @@ void DesarrolloCuatroX(C* Ejercicio);
 void DesarrolloCuatroY(C* Ejercicio);
 void DesarrolloCuatroZ(C* Ejercicio);
 void DesarrolloCuatroW(C* Ejercicio);
+void Imprimir(C* Ejercicio);
 //Main
 // cuando colocamos un string en el main o las funciones insertar,se ejecuta una sola linea de cout infinitamente
 int main() {
@@ -70,6 +71,7 @@ int main() {
                 DesarrolloCuatroY(ejercicioCuatro);
                 DesarrolloCuatroZ(ejercicioCuatro);
                 DesarrolloCuatroW(ejercicioCuatro);
+                Imprimir(ejercicioCuatro)
                 delete(ejercicioDos);
                 break;
 
@@ -355,4 +357,10 @@ void DesarrolloCuatroW(C* Ejercicio){
     float ResultadoUno = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
     cout<<"El Determinante W es: "<<ResultadoUno<<endl;
     Ejercicio->DetW=ResultadoUno;
+}
+void Imprimir(C* Ejercicio){
+    float resultado[3] = {Ejercicio->DetX, Ejercicio->DetY, Ejercicio->DetZ,Ejercicio->DetW};
+    cout << "el programa ha terminando de operar, los resultados fueron: " << endl;
+    cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << "," << resultado[3] << ")" << endl;
+    cout << endl << endl;
 }
