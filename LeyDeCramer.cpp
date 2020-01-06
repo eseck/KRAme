@@ -24,11 +24,9 @@ typedef struct cuatroXcuatro{
 //Funciones para Resolver un sistema 2x2
 void InsertarDos(D* X);
 void DesarrolloDos(D* X);
-void ImprimirResultadosDos(D* X);
 //Funcion para Resolver un sistema 3x3
 void InsertarTres(T* X);
 void DesarrolloTres(T* X);
-void ImprimirResultadosTres(T* X);
 //Funcion para Resolver un sistema 4x4
 void InsertarCuatro(C* X);
 void DesarrolloCuatro(C* X);
@@ -49,13 +47,11 @@ int main() {
                 // Desarrollo para un 2x2
                 InsertarDos(ejercicioDos);
                 DesarrolloDos(ejercicioDos);
-                ImprimirResultadosDos(ejercicioDos);
                 delete(ejercicioDos);
                 break;
             case 2:
                 InsertarTres(ejercicioTres);
                 DesarrolloTres(ejercicioTres);
-                ImprimirResultadosTres(ejercicioTres);
                 delete(ejercicioTres);
                 break;
             case 3:
@@ -105,32 +101,36 @@ void InsertarDos(D* Ejercicio){
         cout<<"skere";
     }
 }
-void DesarrolloDos(D* Ejercicio){
+void DesarrolloDos(D* Ejercicio) {
     //arrays para ordenar los valores
-    float uno[3] = {Ejercicio->x,Ejercicio->y,Ejercicio->r};
-    float dos[3] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R};
+    float uno[3] = {Ejercicio->x, Ejercicio->y, Ejercicio->r};
+    float dos[3] = {Ejercicio->X, Ejercicio->Y, Ejercicio->R};
     //Determinante Sistema.
-    float determinanteSistema = (uno[0] * dos[1])-(uno[1] * dos[0]);
-    cout<<determinanteSistema<<endl;
-    //Determinante de la X.
-    float determinanteX = (uno[2] * dos[1])-(dos[2] * uno[1]);
-    cout<<determinanteX<<endl;
-    //Determinante de la Y.
-    float determianteY = (uno[0] * dos[2]) - (uno[2] * dos[0]);
-    cout<<determianteY<<endl;
-    //Division de los Coeficientes
-    float ValorX = (determinanteX/determinanteSistema);
-    float ValorY = (determianteY/determinanteSistema);
-    float Resultado[2] = {ValorX,ValorY};
-    Ejercicio->ResultadoX=Resultado[0];
-    Ejercicio->ResultadoY=Resultado[1];
+    float determinanteSistema = (uno[0] * dos[1]) - (uno[1] * dos[0]);
+    cout << determinanteSistema << endl;
+    if (determinanteSistema==0) {
+        cout << "el sistema no presenta un formato valido para esta calculadora.";
+    }
+    else{
+        //Determinante de la X.
+        float determinanteX = (uno[2] * dos[1]) - (dos[2] * uno[1]);
+        cout << determinanteX << endl;
+        //Determinante de la Y.
+        float determianteY = (uno[0] * dos[2]) - (uno[2] * dos[0]);
+        cout << determianteY << endl;
+        //Division de los Coeficientes
+        float ValorX = (determinanteX / determinanteSistema);
+        float ValorY = (determianteY / determinanteSistema);
+        float Resultado[2] = {ValorX, ValorY};
+        Ejercicio->ResultadoX = Resultado[0];
+        Ejercicio->ResultadoY = Resultado[1];
+        float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY};
+        cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
+        cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
+        cout << endl << endl;
+    }
 }
-void ImprimirResultadosDos(D* Ejercicio){
-    float resultado[2] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY};
-    cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
-    cout << "(" << resultado[0] << "," << resultado[1] << ")" << endl;
-    cout << endl << endl;
-}
+
 //Funciones3X3
 void InsertarTres(T* Ejercicio) {
     float x,y,z,r,X,Y,Z,R,aX,aY,aZ,aR;
@@ -169,38 +169,41 @@ void DesarrolloTres(T* Ejercicio){
     float DeterminanteSistemaB =
             (uno[2] * dos[1] * tres[0]) + (dos[2] * tres[1] * uno[0]) + (tres[2] * uno[1] * dos[0]);
     float DeterminanteSistema = DeterminanteSistemaA - DeterminanteSistemaB;
-    //Determinante X
-    float DeterminanteXA =
-            (uno[3] * dos[1] * tres[2]) + (dos[2] * tres[3] * uno[1]) + (tres[1] * uno[2] * dos[3]);
-    float DeterminanteXB =
-            (uno[2] * dos[1] * tres[3]) + (dos[2] * tres[1] * uno[3]) + (tres[2] * uno[1] * dos[3]);
-    float DeterminanteX = DeterminanteXA - DeterminanteXB;
-    //Determinante Y
-    float DeterminanteYA =
-            (uno[0] * dos[3] * tres[2]) + (dos[2] * tres[0] * uno[3]) + (tres[3] * uno[2] * dos[0]);
-    float DeterminanteYB =
-            (uno[2] * dos[3] * tres[0]) + (dos[2] * tres[3] * uno[0]) + (tres[2] * uno[3] * dos[0]);
-    float DeterminanteY = DeterminanteYA - DeterminanteYB;
-    //Determinante Z
-    float DeterminanteZA =
-            (uno[0] * dos[1] * tres[3]) + (dos[3] * tres[0] * uno[1]) + (tres[1] * uno[3] * dos[0]);
-    float DeterminanteZB =
-            (uno[3] * dos[1] * tres[0]) + (dos[3] * tres[1] * uno[0]) + (tres[3] * uno[1] * dos[0]);
-    float DeterminanteZ = DeterminanteZA - DeterminanteZB;
-    //Valores incognitas
-    float ValorX = (DeterminanteX/DeterminanteSistema);
-    float ValorY = (DeterminanteY/DeterminanteSistema);
-    float ValorZ = (DeterminanteZ/DeterminanteSistema);
-    float Resultados[3] = {ValorX, ValorY, ValorZ};
-    Ejercicio->ResultadoX=Resultados[0];
-    Ejercicio->ResultadoY=Resultados[1];
-    Ejercicio->ResultadoZ=Resultados[2];
-}
-void ImprimirResultadosTres(T* Ejercicio){
-    float resultado[3] = {Ejercicio->ResultadoX,Ejercicio->ResultadoY,Ejercicio->ResultadoZ};
-    cout << "el programa ha terminando de operar, los resultados fueron: "<< endl;
-    cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << ")" << endl;
-    cout << endl << endl;
+    if (DeterminanteSistema==0){
+        cout << "el sistema no presenta un formato valido para esta calculadora.";
+    }
+    else {
+        //Determinante X
+        float DeterminanteXA =
+                (uno[3] * dos[1] * tres[2]) + (dos[2] * tres[3] * uno[1]) + (tres[1] * uno[2] * dos[3]);
+        float DeterminanteXB =
+                (uno[2] * dos[1] * tres[3]) + (dos[2] * tres[1] * uno[3]) + (tres[2] * uno[1] * dos[3]);
+        float DeterminanteX = DeterminanteXA - DeterminanteXB;
+        //Determinante Y
+        float DeterminanteYA =
+                (uno[0] * dos[3] * tres[2]) + (dos[2] * tres[0] * uno[3]) + (tres[3] * uno[2] * dos[0]);
+        float DeterminanteYB =
+                (uno[2] * dos[3] * tres[0]) + (dos[2] * tres[3] * uno[0]) + (tres[2] * uno[3] * dos[0]);
+        float DeterminanteY = DeterminanteYA - DeterminanteYB;
+        //Determinante Z
+        float DeterminanteZA =
+                (uno[0] * dos[1] * tres[3]) + (dos[3] * tres[0] * uno[1]) + (tres[1] * uno[3] * dos[0]);
+        float DeterminanteZB =
+                (uno[3] * dos[1] * tres[0]) + (dos[3] * tres[1] * uno[0]) + (tres[3] * uno[1] * dos[0]);
+        float DeterminanteZ = DeterminanteZA - DeterminanteZB;
+        //Valores incognitas
+        float ValorX = (DeterminanteX / DeterminanteSistema);
+        float ValorY = (DeterminanteY / DeterminanteSistema);
+        float ValorZ = (DeterminanteZ / DeterminanteSistema);
+        float Resultados[3] = {ValorX, ValorY, ValorZ};
+        Ejercicio->ResultadoX = Resultados[0];
+        Ejercicio->ResultadoY = Resultados[1];
+        Ejercicio->ResultadoZ = Resultados[2];
+        float resultado[3] = {Ejercicio->ResultadoX, Ejercicio->ResultadoY, Ejercicio->ResultadoZ};
+        cout << "el programa ha terminando de operar, los resultados fueron: " << endl;
+        cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << ")" << endl;
+        cout << endl << endl;
+    }
 }
 //Funciones4X4
 void InsertarCuatro(C* Ejercicio){
