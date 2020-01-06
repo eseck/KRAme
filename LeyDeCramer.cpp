@@ -21,6 +21,9 @@ typedef struct cuatroXcuatro{
     float x,y,z,w,r,X,Y,Z,W,R,aX,aY,aZ,aW,aR,ax,ay,az,aw,ar;
     float DetSistema;
     float DetX;
+    float DetY;
+    float DetZ;
+    float DetW;
 }C;
 //Declaraciones de Funciones
 //Funciones para Resolver un sistema 2x2
@@ -34,6 +37,8 @@ void InsertarCuatro(C* X);
 void DesarrolloCuatroSistema(C* X);
 void DesarrolloCuatroX(C* Ejercicio);
 void DesarrolloCuatroY(C* Ejercicio);
+void DesarrolloCuatroZ(C* Ejercicio);
+void DesarrolloCuatroW(C* Ejercicio);
 //Main
 // cuando colocamos un string en el main o las funciones insertar,se ejecuta una sola linea de cout infinitamente
 int main() {
@@ -63,6 +68,8 @@ int main() {
                 DesarrolloCuatroSistema(ejercicioCuatro);
                 DesarrolloCuatroX(ejercicioCuatro);
                 DesarrolloCuatroY(ejercicioCuatro);
+                DesarrolloCuatroZ(ejercicioCuatro);
+                DesarrolloCuatroW(ejercicioCuatro);
                 delete(ejercicioDos);
                 break;
 
@@ -259,6 +266,7 @@ void DesarrolloCuatroSistema(C* Ejercicio){
     float ResultadoUno = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
     cout<<"El determinante del sistema corresponde a: "<<ResultadoUno<<endl;
     Ejercicio->DetSistema=ResultadoUno;
+    cout<<"El determinante del sistema es: "<< ResultadoUno<<endl;
 }
 void DesarrolloCuatroX(C* Ejercicio){
     float FilaUno[4] = {Ejercicio->r,Ejercicio->y,Ejercicio->z,Ejercicio->w};
@@ -302,4 +310,49 @@ void DesarrolloCuatroY(C* Ejercicio){
     float CuatroDiagonal= ((CuatroFilaUno[0]*CuatroFilaDos[1]*CuatroFilaTres[2])+(CuatroFilaUno[1]*CuatroFilaDos[2]*CuatroFilaTres[3])+(CuatroFilaUno[2]*CuatroFilaDos[3]*CuatroFilaTres[4])) - ((CuatroFilaUno[4]*CuatroFilaDos[3]*CuatroFilaTres[2])+(CuatroFilaUno[3]*CuatroFilaDos[2]*CuatroFilaTres[1])+(CuatroFilaUno[2]*CuatroFilaDos[1]*CuatroFilaTres[0]));
     float ResultadoY = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
     cout<<"El Determinante de Y es: "<<ResultadoY<<endl;
+    Ejercicio->DetY=ResultadoY;
+}
+void DesarrolloCuatroZ(C* Ejercicio){
+    float FilaUno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->r,Ejercicio->w};
+    float UnoFilaUno[5] = {Ejercicio->Y,Ejercicio->R,Ejercicio->W,Ejercicio->Y,Ejercicio->R};
+    float UnoFilaDos[5] = {Ejercicio->aY,Ejercicio->aR,Ejercicio->aW,Ejercicio->aY,Ejercicio->aR};
+    float UnoFilaTres[5] = {Ejercicio->ay,Ejercicio->ar,Ejercicio->aw,Ejercicio->ay,Ejercicio->ar};
+    float UnoDiagonal= ((UnoFilaUno[0]*UnoFilaDos[1]*UnoFilaTres[2])+(UnoFilaUno[1]*UnoFilaDos[2]*UnoFilaTres[3])+(UnoFilaUno[2]*UnoFilaDos[3]*UnoFilaTres[4])) - ((UnoFilaUno[4]*UnoFilaDos[3]*UnoFilaTres[2])+(UnoFilaUno[3]*UnoFilaDos[2]*UnoFilaTres[1])+(UnoFilaUno[2]*UnoFilaDos[1]*UnoFilaTres[0]));
+    float DosFilaUno[5] = {Ejercicio->X,Ejercicio->R,Ejercicio->W,Ejercicio->X,Ejercicio->R};
+    float DosFilaDos[5] = {Ejercicio->aX,Ejercicio->aR,Ejercicio->aW,Ejercicio->aX,Ejercicio->aR};
+    float DosFilaTres[5] = {Ejercicio->ax,Ejercicio->ar,Ejercicio->aw,Ejercicio->ax,Ejercicio->ar};
+    float DosDiagonal= ((DosFilaUno[0]*DosFilaDos[1]*DosFilaTres[2])+(DosFilaUno[1]*DosFilaDos[2]*DosFilaTres[3])+(DosFilaUno[2]*DosFilaDos[3]*DosFilaTres[4])) - ((DosFilaUno[4]*DosFilaDos[3]*DosFilaTres[2])+(DosFilaUno[3]*DosFilaDos[2]*DosFilaTres[1])+(DosFilaUno[2]*DosFilaDos[1]*DosFilaTres[0]));
+    float TresFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->W,Ejercicio->X,Ejercicio->Y};
+    float TresFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aW,Ejercicio->aX,Ejercicio->aY};
+    float TresFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->aw,Ejercicio->ax,Ejercicio->ay};
+    float TresDiagonal= ((TresFilaUno[0]*TresFilaDos[1]*TresFilaTres[2])+(TresFilaUno[1]*TresFilaDos[2]*TresFilaTres[3])+(TresFilaUno[2]*TresFilaDos[3]*TresFilaTres[4])) - ((TresFilaUno[4]*TresFilaDos[3]*TresFilaTres[2])+(TresFilaUno[3]*TresFilaDos[2]*TresFilaTres[1])+(TresFilaUno[2]*TresFilaDos[1]*TresFilaTres[0]));
+    float CuatroFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R,Ejercicio->X,Ejercicio->Y};
+    float CuatroFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aR,Ejercicio->aX,Ejercicio->aY};
+    float CuatroFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->az,Ejercicio->ax,Ejercicio->ay};
+    float CuatroDiagonal= ((CuatroFilaUno[0]*CuatroFilaDos[1]*CuatroFilaTres[2])+(CuatroFilaUno[1]*CuatroFilaDos[2]*CuatroFilaTres[3])+(CuatroFilaUno[2]*CuatroFilaDos[3]*CuatroFilaTres[4])) - ((CuatroFilaUno[4]*CuatroFilaDos[3]*CuatroFilaTres[2])+(CuatroFilaUno[3]*CuatroFilaDos[2]*CuatroFilaTres[1])+(CuatroFilaUno[2]*CuatroFilaDos[1]*CuatroFilaTres[0]));
+    float ResultadoZ = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
+    cout<<"El Determinante de Z es: "<<ResultadoZ<<endl;
+    Ejercicio->DetZ=ResultadoZ;
+}
+void DesarrolloCuatroW(C* Ejercicio){
+    float FilaUno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->z,Ejercicio->r};
+    float UnoFilaUno[5] = {Ejercicio->Y,Ejercicio->Z,Ejercicio->R,Ejercicio->Y,Ejercicio->Z};
+    float UnoFilaDos[5] = {Ejercicio->aY,Ejercicio->aZ,Ejercicio->aR,Ejercicio->aY,Ejercicio->aZ};
+    float UnoFilaTres[5] = {Ejercicio->ay,Ejercicio->az,Ejercicio->ar,Ejercicio->ay,Ejercicio->az};
+    float UnoDiagonal= ((UnoFilaUno[0]*UnoFilaDos[1]*UnoFilaTres[2])+(UnoFilaUno[1]*UnoFilaDos[2]*UnoFilaTres[3])+(UnoFilaUno[2]*UnoFilaDos[3]*UnoFilaTres[4])) - ((UnoFilaUno[4]*UnoFilaDos[3]*UnoFilaTres[2])+(UnoFilaUno[3]*UnoFilaDos[2]*UnoFilaTres[1])+(UnoFilaUno[2]*UnoFilaDos[1]*UnoFilaTres[0]));
+    float DosFilaUno[5] = {Ejercicio->X,Ejercicio->Z,Ejercicio->R,Ejercicio->X,Ejercicio->Z};
+    float DosFilaDos[5] = {Ejercicio->aX,Ejercicio->aZ,Ejercicio->aR,Ejercicio->aX,Ejercicio->aZ};
+    float DosFilaTres[5] = {Ejercicio->ax,Ejercicio->az,Ejercicio->ar,Ejercicio->ax,Ejercicio->az};
+    float DosDiagonal= ((DosFilaUno[0]*DosFilaDos[1]*DosFilaTres[2])+(DosFilaUno[1]*DosFilaDos[2]*DosFilaTres[3])+(DosFilaUno[2]*DosFilaDos[3]*DosFilaTres[4])) - ((DosFilaUno[4]*DosFilaDos[3]*DosFilaTres[2])+(DosFilaUno[3]*DosFilaDos[2]*DosFilaTres[1])+(DosFilaUno[2]*DosFilaDos[1]*DosFilaTres[0]));
+    float TresFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->R,Ejercicio->X,Ejercicio->Y};
+    float TresFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aR,Ejercicio->aX,Ejercicio->aY};
+    float TresFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->ar,Ejercicio->ax,Ejercicio->ay};
+    float TresDiagonal= ((TresFilaUno[0]*TresFilaDos[1]*TresFilaTres[2])+(TresFilaUno[1]*TresFilaDos[2]*TresFilaTres[3])+(TresFilaUno[2]*TresFilaDos[3]*TresFilaTres[4])) - ((TresFilaUno[4]*TresFilaDos[3]*TresFilaTres[2])+(TresFilaUno[3]*TresFilaDos[2]*TresFilaTres[1])+(TresFilaUno[2]*TresFilaDos[1]*TresFilaTres[0]));
+    float CuatroFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->Z,Ejercicio->X,Ejercicio->Y};
+    float CuatroFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aZ,Ejercicio->aX,Ejercicio->aY};
+    float CuatroFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->az,Ejercicio->ax,Ejercicio->ay};
+    float CuatroDiagonal= ((CuatroFilaUno[0]*CuatroFilaDos[1]*CuatroFilaTres[2])+(CuatroFilaUno[1]*CuatroFilaDos[2]*CuatroFilaTres[3])+(CuatroFilaUno[2]*CuatroFilaDos[3]*CuatroFilaTres[4])) - ((CuatroFilaUno[4]*CuatroFilaDos[3]*CuatroFilaTres[2])+(CuatroFilaUno[3]*CuatroFilaDos[2]*CuatroFilaTres[1])+(CuatroFilaUno[2]*CuatroFilaDos[1]*CuatroFilaTres[0]));
+    float ResultadoUno = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
+    cout<<"El Determinante W es: "<<ResultadoUno<<endl;
+    Ejercicio->DetW=ResultadoUno;
 }
