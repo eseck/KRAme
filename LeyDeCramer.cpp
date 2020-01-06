@@ -364,4 +364,3 @@ void Imprimir(C* Ejercicio){
     cout << endl << endl;
 }
 //Termino Del Programa
-//Arreglar Z 4X4 det
