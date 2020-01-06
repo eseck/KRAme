@@ -19,6 +19,7 @@ typedef struct tresXtres{
 }T;
 typedef struct cuatroXcuatro{
     float x,y,z,w,r,X,Y,Z,W,R,aX,aY,aZ,aW,aR,ax,ay,az,aw,ar;
+    float DetSistema;
 }C;
 //Declaraciones de Funciones
 //Funciones para Resolver un sistema 2x2
@@ -29,8 +30,7 @@ void InsertarTres(T* X);
 void DesarrolloTres(T* X);
 //Funcion para Resolver un sistema 4x4
 void InsertarCuatro(C* X);
-void DesarrolloCuatro(C* X);
-void ImprimirResultadosCuatro(C* X);
+void DesarrolloCuatroSistema(C* X);
 //Main
 // cuando colocamos un string en el main o las funciones insertar,se ejecuta una sola linea de cout infinitamente
 int main() {
@@ -57,7 +57,7 @@ int main() {
                 break;
             case 3:
                 InsertarCuatro(ejercicioCuatro);
-                DesarrolloCuatro(ejercicioCuatro);
+                DesarrolloCuatroSistema(ejercicioCuatro);
                 delete(ejercicioDos);
                 break;
 
@@ -233,8 +233,8 @@ void InsertarCuatro(C* Ejercicio){
     Ejercicio->aW=aW;Ejercicio->aZ=aZ;Ejercicio->aX=aX;Ejercicio->aY=aY;Ejercicio->aR=aR;
     Ejercicio->ax=ax;Ejercicio->ay=ay;Ejercicio->aw=aw;Ejercicio->az=az;Ejercicio->ar=ar;
 }
-void DesarrolloCuatro(C* Ejercicio){
-    //primera parte
+void DesarrolloCuatroSistema(C* Ejercicio){
+    //Determinante el sistema
     float FilaUno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->z,Ejercicio->w};
     float UnoFilaUno[5] = {Ejercicio->Y,Ejercicio->Z,Ejercicio->W,Ejercicio->Y,Ejercicio->Z};
     float UnoFilaDos[5] = {Ejercicio->aY,Ejercicio->aZ,Ejercicio->aW,Ejercicio->aY,Ejercicio->aZ};
@@ -254,5 +254,5 @@ void DesarrolloCuatro(C* Ejercicio){
     float CuatroDiagonal= ((CuatroFilaUno[0]*CuatroFilaDos[1]*CuatroFilaTres[2])+(CuatroFilaUno[1]*CuatroFilaDos[2]*CuatroFilaTres[3])+(CuatroFilaUno[2]*CuatroFilaDos[3]*CuatroFilaTres[4])) - ((CuatroFilaUno[4]*CuatroFilaDos[3]*CuatroFilaTres[2])+(CuatroFilaUno[3]*CuatroFilaDos[2]*CuatroFilaTres[1])+(CuatroFilaUno[2]*CuatroFilaDos[1]*CuatroFilaTres[0]));
     float ResultadoUno = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
     cout<<"El determinante del sistema corresponde a: "<<ResultadoUno<<endl;
-
+    Ejercicio->DetSistema=ResultadoUno;
 }
