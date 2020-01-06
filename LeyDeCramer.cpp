@@ -40,7 +40,8 @@ int main() {
     T* ejercicioTres = new T;
     C* ejercicioCuatro =  new C;
     do {
-        cout << "Por favor, elija que tipo de matriz planea usar.";
+        cout << "Para elijir que tipo de matriz planea usar,ingrese el numero de la opcion"<<endl<<"opcion 1) matriz 2x2"<<endl;
+        cout <<"opcion 2) matrix 3x3"<<endl<<"opcion 3) matrix 4x4"<<endl<<"Introducir cualquier otro caracter distintos a las opciones terminara el programa.";
         cin >> Tipo;
         switch(Tipo) {
             case 1:
