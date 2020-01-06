@@ -235,31 +235,24 @@ void InsertarCuatro(C* Ejercicio){
 }
 void DesarrolloCuatro(C* Ejercicio){
     //primera parte
-
     float FilaUno[4] = {Ejercicio->x,Ejercicio->y,Ejercicio->z,Ejercicio->w};
-
     float UnoFilaUno[5] = {Ejercicio->Y,Ejercicio->Z,Ejercicio->W,Ejercicio->Y,Ejercicio->Z};
     float UnoFilaDos[5] = {Ejercicio->aY,Ejercicio->aZ,Ejercicio->aW,Ejercicio->aY,Ejercicio->aZ};
     float UnoFilaTres[5] = {Ejercicio->ay,Ejercicio->az,Ejercicio->aw,Ejercicio->ay,Ejercicio->az};
     float UnoDiagonal= ((UnoFilaUno[0]*UnoFilaDos[1]*UnoFilaTres[2])+(UnoFilaUno[1]*UnoFilaDos[2]*UnoFilaTres[3])+(UnoFilaUno[2]*UnoFilaDos[3]*UnoFilaTres[4])) - ((UnoFilaUno[4]*UnoFilaDos[3]*UnoFilaTres[2])+(UnoFilaUno[3]*UnoFilaDos[2]*UnoFilaTres[1])+(UnoFilaUno[2]*UnoFilaDos[1]*UnoFilaTres[0]));
-    cout<<UnoDiagonal<<endl;
     float DosFilaUno[5] = {Ejercicio->X,Ejercicio->Z,Ejercicio->W,Ejercicio->X,Ejercicio->Z};
     float DosFilaDos[5] = {Ejercicio->aX,Ejercicio->aZ,Ejercicio->aW,Ejercicio->aX,Ejercicio->aZ};
     float DosFilaTres[5] = {Ejercicio->ax,Ejercicio->az,Ejercicio->aw,Ejercicio->ax,Ejercicio->az};
     float DosDiagonal= ((DosFilaUno[0]*DosFilaDos[1]*DosFilaTres[2])+(DosFilaUno[1]*DosFilaDos[2]*DosFilaTres[3])+(DosFilaUno[2]*DosFilaDos[3]*DosFilaTres[4])) - ((DosFilaUno[4]*DosFilaDos[3]*DosFilaTres[2])+(DosFilaUno[3]*DosFilaDos[2]*DosFilaTres[1])+(DosFilaUno[2]*DosFilaDos[1]*DosFilaTres[0]));
-    cout<<DosDiagonal<<endl;
     float TresFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->W,Ejercicio->X,Ejercicio->Y};
     float TresFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aW,Ejercicio->aX,Ejercicio->aY};
     float TresFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->aw,Ejercicio->ax,Ejercicio->ay};
     float TresDiagonal= ((TresFilaUno[0]*TresFilaDos[1]*TresFilaTres[2])+(TresFilaUno[1]*TresFilaDos[2]*TresFilaTres[3])+(TresFilaUno[2]*TresFilaDos[3]*TresFilaTres[4])) - ((TresFilaUno[4]*TresFilaDos[3]*TresFilaTres[2])+(TresFilaUno[3]*TresFilaDos[2]*TresFilaTres[1])+(TresFilaUno[2]*TresFilaDos[1]*TresFilaTres[0]));
-    cout<<TresDiagonal<<endl;
     float CuatroFilaUno[5] = {Ejercicio->X,Ejercicio->Y,Ejercicio->Z,Ejercicio->X,Ejercicio->Y};
     float CuatroFilaDos[5] = {Ejercicio->aX,Ejercicio->aY,Ejercicio->aZ,Ejercicio->aX,Ejercicio->aY};
     float CuatroFilaTres[5] = {Ejercicio->ax,Ejercicio->ay,Ejercicio->az,Ejercicio->ax,Ejercicio->ay};
     float CuatroDiagonal= ((CuatroFilaUno[0]*CuatroFilaDos[1]*CuatroFilaTres[2])+(CuatroFilaUno[1]*CuatroFilaDos[2]*CuatroFilaTres[3])+(CuatroFilaUno[2]*CuatroFilaDos[3]*CuatroFilaTres[4])) - ((CuatroFilaUno[4]*CuatroFilaDos[3]*CuatroFilaTres[2])+(CuatroFilaUno[3]*CuatroFilaDos[2]*CuatroFilaTres[1])+(CuatroFilaUno[2]*CuatroFilaDos[1]*CuatroFilaTres[0]));
-    cout<<CuatroDiagonal<<endl;
     float ResultadoUno = ((FilaUno[0]*UnoDiagonal)+(FilaUno[1]*DosDiagonal*-1)+(FilaUno[2]*TresDiagonal*1)+(FilaUno[3]*CuatroDiagonal*-1));
-    cout<<ResultadoUno;
-}
+    cout<<"El determinante del sistema corresponde a: "<<ResultadoUno<<endl;
 
-void ImprimirResultadosCuatro(C* Ejercicio){}
+}
