@@ -358,9 +358,9 @@ void DesarrolloCuatroW(C* Ejercicio){
     Ejercicio->DetW=ResultadoUno;
 }
 void Imprimir(C* Ejercicio){
-    float resultado[4] = {Ejercicio->DetX, Ejercicio->DetY, Ejercicio->DetZ,Ejercicio->DetW};
+    float resultado[5] = {Ejercicio->DetX, Ejercicio->DetY, Ejercicio->DetZ,Ejercicio->DetW,Ejercicio->DetSistema};
     cout << "el programa ha terminando de operar, los resultados fueron: " << endl;
-    cout << "(" << resultado[0] << "," << resultado[1] << "," << resultado[2] << "," << resultado[3] << ")" << endl;
+    cout << "(" << (resultado[0]/resultado[4]) << "," << (resultado[1]/resultado[4]) << "," << (resultado[2]/resultado[4]) << "," << (resultado[3]/resultado[4]) << ")" << endl;
     cout << endl << endl;
 }
 //Termino Del Programa
