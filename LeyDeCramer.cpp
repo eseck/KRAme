@@ -40,6 +40,7 @@ int main() {
     cout << "Bienvenido a la Calculadora de matrices de NeoTel Companny."<<endl;
     D* ejercicioDos = new D;
     T* ejercicioTres = new T;
+    C* ejercicioCuatro =  new C;
     do {
         cout << "Por favor, elija que tipo de matriz planea usar.";
         cin >> Tipo;
@@ -58,6 +59,13 @@ int main() {
                 delete(ejercicioTres);
                 break;
             case 3:
+                InsertarCuatro(ejercicioCuatro);
+                DesarrolloCuatro(ejercicioCuatro);
+                ImprimirResultadosCuatro(ejercicioCuatro);
+                delete(ejercicioDos);
+                break;
+
+            case 4:
                 cout << "Gracias por preferir nuestra Calculadora. Hasta pronto!!";
                 break;
             default:
